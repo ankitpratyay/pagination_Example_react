@@ -1,38 +1,46 @@
 .App {
+  font-family: sans-serif;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.crypto_List {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.card {
+  margin: 8px;
+  width: 264px;
+  box-shadow: 5px 5px 20px black;
+}
+.card:hover {
+  cursor: pointer;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination button {
+  width: 40px;
+  height: 40px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  color: #2a2929;
+  border-color: #eee;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pagination button.active {
+  font-weight: 900;
+  border-color: #101010;
+  background: #ffe400;
+  color: #101010;
 }
